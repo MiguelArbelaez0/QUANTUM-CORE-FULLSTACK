@@ -1,6 +1,6 @@
 # Quantum Core
 
-> Full-Stack transaction management system built with React, Flask, Prisma and MySQL.
+> Full-Stack financial transaction management system built with React, Flask, Prisma, MySQL and Docker.
 
 Quantum Core is a full-stack web application developed as an academic project for managing and analyzing financial transactions through a client-server architecture.
 
