@@ -1,42 +1,42 @@
 # Quantum Core
 
-> Full-Stack financial transaction management system built with React, Flask, Prisma, MySQL and Docker.
+> Sistema web integral para la gestión de transacciones financieras, desarrollado con React, Flask, Prisma, MySQL y Docker.
 
-Quantum Core is a full-stack web application developed as an academic project for managing and analyzing financial transactions through a client-server architecture.
+Quantum Core es una aplicación web desarrollada como proyecto académico para gestionar y analizar transacciones financieras mediante una arquitectura cliente-servidor.
 
-The project demonstrates the integration of a React frontend, a Python Flask REST API, Prisma ORM, and a MySQL database running through Docker.
+El proyecto integra un frontend en React, una API REST desarrollada con Python y Flask, Prisma ORM y una base de datos MySQL ejecutada mediante Docker.
 
-## 📌 Overview
+## 📌 Descripción general
 
-Quantum Core provides a complete transaction-management workflow with:
+Quantum Core permite realizar un flujo completo de gestión de transacciones:
 
-- Create, read, update, and delete operations.
-- Financial statistics and aggregation.
-- Net balance calculation.
-- Input validation.
-- REST API communication.
-- Persistent storage with MySQL.
-- Responsive web interface.
+- Crear, consultar, actualizar y eliminar registros.
+- Calcular estadísticas financieras.
+- Calcular el saldo neto.
+- Validar los datos de entrada.
+- Consumir una API REST.
+- Persistir información en MySQL.
+- Utilizar una interfaz web adaptable.
 
-The main application flow is:
+Flujo principal:
 
 ```text
-User
+Usuario
   ↓
 React + Vite
   ↓
 HTTP / JSON
   ↓
-Flask REST API
+API REST con Flask
   ↓
 Prisma ORM
   ↓
 MySQL
 ```
 
-## 🏗️ Architecture
+## 🏗️ Arquitectura
 
-The application separates the presentation layer, backend API, business operations, and data persistence.
+La aplicación separa la presentación, la API, la lógica de aplicación y la persistencia.
 
 ```text
 Frontend
@@ -51,73 +51,69 @@ Python + Flask
 Prisma ORM
      │
      ▼
-Database
+Base de datos
 MySQL 8
      │
      ▼
 Docker
 ```
 
-This structure keeps the frontend, API layer, and persistence layer independent and easier to maintain.
+Esta estructura mantiene las responsabilidades separadas y facilita el mantenimiento del proyecto.
 
-## 🚀 Features
+## 🚀 Funcionalidades
 
-- Create financial transactions.
-- View transaction records.
-- View individual transactions.
-- Update transactions.
-- Delete transactions.
-- Calculate total credits.
-- Calculate total debits.
-- Calculate net balance.
-- Display financial statistics.
-- Validate transaction data.
-- Provide success and error feedback.
-- Consume a REST API from the frontend.
-- Persist data in MySQL.
-- Responsive web interface.
+- Crear transacciones.
+- Consultar transacciones.
+- Consultar una transacción individual.
+- Actualizar transacciones.
+- Eliminar transacciones.
+- Calcular ingresos totales.
+- Calcular egresos totales.
+- Calcular saldo neto.
+- Mostrar estadísticas financieras.
+- Validar datos de las transacciones.
+- Mostrar mensajes de éxito y error.
+- Consumir la API REST desde React.
+- Persistir información en MySQL.
+- Interfaz web adaptable.
 
-## 💰 Transaction Management
+## 💰 Gestión de transacciones
 
-The application implements CRUD operations through the REST API.
+Las operaciones CRUD se realizan mediante la API REST.
 
-| Operation | HTTP method | Purpose |
+| Operación | Método HTTP | Propósito |
 |---|---|---|
-| Create | POST | Register a transaction |
-| Read | GET | Retrieve transactions |
-| Update | PUT | Modify a transaction |
-| Delete | DELETE | Remove a transaction |
+| Crear | POST | Registrar una transacción |
+| Consultar | GET | Obtener transacciones |
+| Actualizar | PUT | Modificar una transacción |
+| Eliminar | DELETE | Eliminar una transacción |
 
-The frontend does not access the database directly. All transaction operations pass through the Flask API.
+El frontend no accede directamente a la base de datos. Todas las operaciones pasan por la API desarrollada con Flask.
 
-## 📊 Financial Statistics
+## 📊 Estadísticas financieras
 
-The application calculates financial information from the stored transaction data.
+La aplicación calcula información a partir de las transacciones almacenadas:
 
-The main indicators are:
+- Total de transacciones.
+- Total de ingresos.
+- Total de egresos.
+- Saldo neto.
 
-- Total transactions.
-- Total credits.
-- Total debits.
-- Net balance.
-
-The net balance is calculated as:
+El saldo neto se calcula como:
 
 ```text
-NET BALANCE = CREDITS - DEBITS
+SALDO NETO = INGRESOS - EGRESOS
 ```
 
-This demonstrates data aggregation and business-oriented calculations in a full-stack application.
+## 🌐 API REST
 
-## 🌐 REST API
-
-The Flask backend exposes the transaction API under:
+La API principal se encuentra bajo:
 
 ```text
 /api/transacciones/
 ```
 
-The available operations include:
+Operaciones disponibles:
 
 ```text
 GET     /api/transacciones/
@@ -127,47 +123,45 @@ PUT     /api/transacciones/<id>
 DELETE  /api/transacciones/<id>
 ```
 
-Communication between the React frontend and Flask backend uses HTTP and JSON.
+La comunicación entre React y Flask utiliza HTTP y JSON.
 
-## 🧩 Technologies
+## 🧩 Tecnologías
 
-| Technology | Usage |
+| Tecnología | Uso |
 |---|---|
-| React | Frontend application |
-| Vite | Frontend tooling and development server |
-| JavaScript | Frontend programming language |
-| Tailwind CSS | Interface styling |
-| Fetch API | HTTP communication |
-| Python | Backend programming language |
-| Flask | REST API framework |
-| Flask-CORS | Cross-origin communication |
-| Prisma ORM | Database access |
-| MySQL 8 | Relational database |
-| Docker | Database containerization |
+| React | Interfaz web |
+| Vite | Herramientas y servidor de desarrollo |
+| JavaScript | Lenguaje del frontend |
+| Tailwind CSS | Estilos de la interfaz |
+| Fetch API | Comunicación HTTP |
+| Python | Lenguaje del backend |
+| Flask | Desarrollo de la API REST |
+| Flask-CORS | Comunicación entre orígenes |
+| Prisma ORM | Acceso a datos |
+| MySQL 8 | Base de datos relacional |
+| Docker | Contenerización de la base de datos |
 
-## 🗄️ Persistence
+## 🗄️ Persistencia
 
-Prisma ORM is used as the data-access layer between the Flask backend and MySQL.
+Prisma ORM funciona como capa de acceso entre Flask y MySQL.
 
-MySQL runs through Docker, providing a reproducible local database environment for development.
+MySQL se ejecuta mediante Docker, proporcionando un entorno local reproducible para el desarrollo.
 
-The backend loads database configuration through environment variables. Sensitive configuration should remain local and must not be committed to the repository.
+La configuración de la base de datos se carga mediante variables de entorno. Las credenciales sensibles deben permanecer únicamente en el entorno local.
 
-## 🖥️ Interface
+## 🖥️ Interfaz
 
-The frontend is built with React and Vite and provides:
+La interfaz está desarrollada con React y Vite e incluye:
 
-- Transaction management views.
-- Financial statistics.
-- Transaction forms.
-- Edit and delete interactions.
-- Validation feedback.
-- Success and error messages.
-- Responsive layout.
+- Gestión de transacciones.
+- Estadísticas financieras.
+- Formularios de transacciones.
+- Edición y eliminación.
+- Validación de datos.
+- Mensajes de éxito y error.
+- Diseño adaptable.
 
-## 📂 Project Structure
-
-The main application is contained inside the `Proyecto_Completo` directory:
+## 📂 Estructura principal
 
 ```text
 QUANTUM-CORE-FULLSTACK/
@@ -181,35 +175,31 @@ QUANTUM-CORE-FULLSTACK/
 │   │   └── app.py
 │   │
 │   └── FRONTEND/
-│       └── React + Vite application
+│       └── Aplicación React + Vite
 │
 └── README.md
 ```
 
-The backend contains the Flask API, controllers, routes, Prisma integration, and database configuration. The frontend contains the React application and user interface.
+## ⚙️ Instalación
 
-## ⚙️ Installation
-
-### 1. Clone the repository
+### 1. Clonar el repositorio
 
 ```bash
 git clone https://github.com/MiguelArbelaez0/QUANTUM-CORE-FULLSTACK.git
 cd QUANTUM-CORE-FULLSTACK
 ```
 
-### 2. Database
+### 2. Base de datos
 
-Start the MySQL Docker container used by the project:
+Iniciar el contenedor de MySQL utilizado por el proyecto:
 
 ```bash
 docker start empresa
 ```
 
-The local environment uses MySQL through Docker rather than requiring a separate local MySQL installation.
-
 ### 3. Backend
 
-From the backend directory, activate the Python environment and start the Flask API:
+Desde la carpeta del backend, activar el entorno de Python e iniciar la API:
 
 ```powershell
 cd Proyecto_Completo\BACKEND
@@ -217,11 +207,11 @@ cd Proyecto_Completo\BACKEND
 python app.py
 ```
 
-The backend runs on port `5000`.
+El backend utiliza el puerto `5000`.
 
 ### 4. Frontend
 
-From the frontend directory:
+Desde la carpeta del frontend:
 
 ```bash
 cd Proyecto_Completo/FRONTEND
@@ -229,80 +219,53 @@ npm install
 npm run dev
 ```
 
-The Vite development server runs on port `5173`.
+El servidor de desarrollo de Vite utiliza el puerto `5173`.
 
-> Keep environment files such as `.env` local. Never commit database passwords or other sensitive credentials.
+> Mantén los archivos como `.env` únicamente en local. Nunca publiques contraseñas ni credenciales sensibles.
 
-## ▶️ Local Access
+## ▶️ Acceso local
 
-### Frontend
-
+**Frontend**
 ```text
 http://localhost:5173
 ```
 
-### Backend
-
+**Backend**
 ```text
 http://127.0.0.1:5000
 ```
 
-### API
-
+**API**
 ```text
 http://127.0.0.1:5000/api/transacciones/
 ```
 
-## 🔄 Application Flow
+## 🎯 Qué demuestra este proyecto
 
-```text
-User
-  ↓
-React Interface
-  ↓
-Fetch API
-  ↓
-Flask REST API
-  ↓
-Controllers / Routes
-  ↓
-Prisma ORM
-  ↓
-MySQL
-```
-
-The frontend handles user interaction, the Flask API processes requests, the backend routes requests through the application logic, Prisma manages database access, and MySQL provides persistent storage.
-
-## 🎯 What This Project Demonstrates
-
-This project demonstrates practical experience with:
-
-- Full-stack web development.
-- React and Vite.
-- Python and Flask.
-- REST API development.
+- Desarrollo web integral.
+- React y Vite.
+- Python y Flask.
+- Diseño de APIs REST.
 - Prisma ORM.
 - MySQL.
 - Docker.
-- CRUD operations.
-- Client-server architecture.
-- Data validation.
-- Financial data aggregation.
-- REST-based frontend/backend integration.
-- Responsive web interfaces.
-- Separation of application responsibilities.
+- Operaciones CRUD.
+- Arquitectura cliente-servidor.
+- Validación de datos.
+- Agregación de información financiera.
+- Integración entre frontend y backend.
+- Diseño de interfaces adaptables.
+- Separación de responsabilidades.
 
-## 📌 Project Status
+## 📌 Estado del proyecto
 
-**Completed academic and portfolio project.**
+**Proyecto académico y de portafolio terminado.**
 
-The project was developed to demonstrate practical full-stack development, REST API design, database integration, Docker-based persistence, and client-server architecture.
-
-## 👨‍💻 Author
+## 👨‍💻 Autor
 
 **Miguel Arbeláez Vallejo**
 
-Software Developer | Flutter & Dart | Full-Stack | Backend | AI/Data
+Desarrollador de Software | Flutter y Dart | Desarrollo integral | Backend | IA y Datos
 
 - GitHub: https://github.com/MiguelArbelaez0
 - LinkedIn: https://www.linkedin.com/in/miguel-arbelaez-v-57719542b/
