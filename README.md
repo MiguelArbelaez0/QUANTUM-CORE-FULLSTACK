@@ -4,7 +4,7 @@
 
 Quantum Core es una aplicación web desarrollada como proyecto académico para gestionar y analizar transacciones financieras mediante una arquitectura cliente-servidor.
 
-El proyecto integra un frontend en React, una API REST desarrollada con Python y Flask, Prisma ORM y una base de datos MySQL ejecutada mediante Docker.
+El proyecto integra un interfaz en React, una API REST desarrollada con Python y Flask, Prisma ORM y una base de datos MySQL ejecutada mediante Docker.
 
 ## 📌 Descripción general
 
@@ -88,7 +88,7 @@ Las operaciones CRUD se realizan mediante la API REST.
 | Actualizar | PUT | Modificar una transacción |
 | Eliminar | DELETE | Eliminar una transacción |
 
-El frontend no accede directamente a la base de datos. Todas las operaciones pasan por la API desarrollada con Flask.
+El interfaz no accede directamente a la base de datos. Todas las operaciones pasan por la API desarrollada con Flask.
 
 ## 📊 Estadísticas financieras
 
@@ -131,10 +131,10 @@ La comunicación entre React y Flask utiliza HTTP y JSON.
 |---|---|
 | React | Interfaz web |
 | Vite | Herramientas y servidor de desarrollo |
-| JavaScript | Lenguaje del frontend |
+| JavaScript | Lenguaje del interfaz |
 | Tailwind CSS | Estilos de la interfaz |
 | Fetch API | Comunicación HTTP |
-| Python | Lenguaje del backend |
+| Python | Lenguaje del servidor |
 | Flask | Desarrollo de la API REST |
 | Flask-CORS | Comunicación entre orígenes |
 | Prisma ORM | Acceso a datos |
@@ -197,9 +197,9 @@ Iniciar el contenedor de MySQL utilizado por el proyecto:
 docker start empresa
 ```
 
-### 3. Backend
+### 3. Servidor
 
-Desde la carpeta del backend, activar el entorno de Python e iniciar la API:
+Desde la carpeta del servidor, activar el entorno de Python e iniciar la API:
 
 ```powershell
 cd Proyecto_Completo\BACKEND
@@ -207,11 +207,11 @@ cd Proyecto_Completo\BACKEND
 python app.py
 ```
 
-El backend utiliza el puerto `5000`.
+El servidor utiliza el puerto `5000`.
 
-### 4. Frontend
+### 4. Interfaz
 
-Desde la carpeta del frontend:
+Desde la carpeta del interfaz:
 
 ```bash
 cd Proyecto_Completo/FRONTEND
@@ -225,12 +225,12 @@ El servidor de desarrollo de Vite utiliza el puerto `5173`.
 
 ## ▶️ Acceso local
 
-**Frontend**
+**Interfaz**
 ```text
 http://localhost:5173
 ```
 
-**Backend**
+**Servidor**
 ```text
 http://127.0.0.1:5000
 ```
@@ -253,7 +253,7 @@ http://127.0.0.1:5000/api/transacciones/
 - Arquitectura cliente-servidor.
 - Validación de datos.
 - Agregación de información financiera.
-- Integración entre frontend y backend.
+- Integración entre interfaz y servidor.
 - Diseño de interfaces adaptables.
 - Separación de responsabilidades.
 
@@ -265,7 +265,7 @@ http://127.0.0.1:5000/api/transacciones/
 
 **Miguel Arbeláez Vallejo**
 
-Desarrollador de Software | Flutter y Dart | Desarrollo integral | Backend | IA y Datos
+Desarrollador de Software | Flutter y Dart | Desarrollo integral | Servidor | IA y Datos
 
 - GitHub: https://github.com/MiguelArbelaez0
 - LinkedIn: https://www.linkedin.com/in/miguel-arbelaez-v-57719542b/
