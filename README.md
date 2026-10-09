@@ -39,12 +39,12 @@ MySQL
 La aplicación separa la presentación, la API, la lógica de aplicación y la persistencia.
 
 ```text
-Frontend
+Interfaz web
 React + Vite
      │
      │ HTTP / JSON
      ▼
-Backend
+Servidor
 Python + Flask
      │
      ▼
@@ -88,7 +88,7 @@ Las operaciones CRUD se realizan mediante la API REST.
 | Actualizar | PUT | Modificar una transacción |
 | Eliminar | DELETE | Eliminar una transacción |
 
-El interfaz no accede directamente a la base de datos. Todas las operaciones pasan por la API desarrollada con Flask.
+La interfaz no accede directamente a la base de datos. Todas las operaciones pasan por la API desarrollada con Flask.
 
 ## 📊 Estadísticas financieras
 
@@ -131,7 +131,7 @@ La comunicación entre React y Flask utiliza HTTP y JSON.
 |---|---|
 | React | Interfaz web |
 | Vite | Herramientas y servidor de desarrollo |
-| JavaScript | Lenguaje del interfaz |
+| JavaScript | Lenguaje de la interfaz |
 | Tailwind CSS | Estilos de la interfaz |
 | Fetch API | Comunicación HTTP |
 | Python | Lenguaje del servidor |
