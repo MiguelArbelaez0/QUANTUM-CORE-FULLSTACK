@@ -1,11 +1,10 @@
 # Quantum Core
 
-> **Resumen para evaluación técnica**  
+> **En resumen**  
 > **Stack:** React · Vite · Flask · Prisma · MySQL  
-> **Evidencia:** Demuestra separación frontend/backend, API REST y operaciones CRUD; la instalación desde cero requiere completar dependencias.  
-> **Código para revisar:** `Proyecto_Completo/FRONTEND/src/` y `Proyecto_Completo/BACKEND/`.  
-> **Estado:** revisión documental; pruebas y despliegue no verificados.
-
+> **Funcionalidad:** separación frontend/backend, API REST y operaciones CRUD; la instalación desde cero requiere completar dependencias.  
+> **Código principal:** `Proyecto_Completo/FRONTEND/src/` y `Proyecto_Completo/BACKEND/`.  
+> **Pruebas:** ejecución no verificada.
 
 > Sistema web integral para la gestión de transacciones financieras, desarrollado con React, Flask, Prisma, MySQL y Docker.
 
@@ -208,7 +207,6 @@ docker start empresa
 
 > **Advertencia de reproducibilidad:** el archivo `Proyecto_Completo/BACKEND/requirements.txt` actualmente solo contiene Gunicorn. El backend también importa Flask, Flask-CORS, Prisma Client Python y python-dotenv, por lo que `pip install -r requirements.txt` por sí solo **no prepara** el entorno completo. La instalación reproducible y la generación del cliente Prisma requieren completar la configuración de dependencias. Los comandos siguientes describen un entorno de desarrollo **previamente configurado**, no una instalación desde cero.
 
-
 Desde la carpeta del servidor, activar el entorno de Python e iniciar la API:
 
 ```powershell
@@ -282,8 +280,7 @@ Flutter & Dart · Full-Stack · Backend · AI/Data
 
 ---
 
-## Estado técnico y limitaciones
+## Requisitos y limitaciones
 
 El código confirma Flask, Flask-CORS, Prisma Client Python y una aplicación React/Vite con MySQL definido en `schema.prisma`. Sin embargo, `Proyecto_Completo/BACKEND/requirements.txt` solo declara Gunicorn; no instala todas las dependencias importadas. El procedimiento original presupone un contenedor Docker llamado `empresa` y un entorno `.venv` preexistente. No se ha verificado un arranque limpio ni la ejecución de la aplicación.
 
-**Verificación:** análisis estático del repositorio. No se han comprobado aquí compilación, pruebas automatizadas, despliegue ni seguridad dinámica.
