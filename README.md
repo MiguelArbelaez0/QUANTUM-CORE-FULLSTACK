@@ -3,8 +3,8 @@
 > **Resumen para evaluación técnica**  
 > **Stack:** React · Vite · Flask · Prisma · MySQL  
 > **Evidencia:** Demuestra separación frontend/backend, API REST y operaciones CRUD; la instalación desde cero requiere completar dependencias.  
-> **Código relevante:** Para evaluar: `Proyecto_Completo/FRONTEND/src/` y `Proyecto_Completo/BACKEND/`.  
-> **Verificación:** revisión estática de repositorio; no equivale a ejecución de tests ni certificación de producción.
+> **Código para revisar:** `Proyecto_Completo/FRONTEND/src/` y `Proyecto_Completo/BACKEND/`.  
+> **Estado:** revisión documental; pruebas y despliegue no verificados.
 
 
 > Sistema web integral para la gestión de transacciones financieras, desarrollado con React, Flask, Prisma, MySQL y Docker.
@@ -282,8 +282,8 @@ Flutter & Dart · Full-Stack · Backend · AI/Data
 
 ---
 
-## 🔎 Alcance y verificación documental (2026-11-02)
+## Estado técnico y limitaciones
 
 El código confirma Flask, Flask-CORS, Prisma Client Python y una aplicación React/Vite con MySQL definido en `schema.prisma`. Sin embargo, `Proyecto_Completo/BACKEND/requirements.txt` solo declara Gunicorn; no instala todas las dependencias importadas. El procedimiento original presupone un contenedor Docker llamado `empresa` y un entorno `.venv` preexistente. No se ha verificado un arranque limpio ni la ejecución de la aplicación.
 
-**Estado de la revisión:** contraste estático entre documentación, estructura y archivos de configuración/código seleccionados. No se ejecutaron compilaciones, pruebas automatizadas, despliegues ni auditorías dinámicas de seguridad. La documentación describe el alcance observado, sin certificar preparación para producción.
+**Verificación:** análisis estático del repositorio. No se han comprobado aquí compilación, pruebas automatizadas, despliegue ni seguridad dinámica.
