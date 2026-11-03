@@ -1,5 +1,12 @@
 # Quantum Core
 
+> **Resumen para evaluación técnica**  
+> **Stack:** React · Vite · Flask · Prisma · MySQL  
+> **Evidencia:** Demuestra separación frontend/backend, API REST y operaciones CRUD; la instalación desde cero requiere completar dependencias.  
+> **Código relevante:** Para evaluar: `Proyecto_Completo/FRONTEND/src/` y `Proyecto_Completo/BACKEND/`.  
+> **Verificación:** revisión estática de repositorio; no equivale a ejecución de tests ni certificación de producción.
+
+
 > Sistema web integral para la gestión de transacciones financieras, desarrollado con React, Flask, Prisma, MySQL y Docker.
 
 Quantum Core es una aplicación web desarrollada como proyecto académico para gestionar y analizar transacciones financieras mediante una arquitectura cliente-servidor.
