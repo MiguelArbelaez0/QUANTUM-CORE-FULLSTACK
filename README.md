@@ -199,6 +199,9 @@ docker start empresa
 
 ### 3. Servidor
 
+> **Advertencia de reproducibilidad:** el archivo `Proyecto_Completo/BACKEND/requirements.txt` actualmente solo contiene Gunicorn. El backend también importa Flask, Flask-CORS, Prisma Client Python y python-dotenv, por lo que `pip install -r requirements.txt` por sí solo **no prepara** el entorno completo. La instalación reproducible y la generación del cliente Prisma requieren completar la configuración de dependencias. Los comandos siguientes describen un entorno de desarrollo **previamente configurado**, no una instalación desde cero.
+
+
 Desde la carpeta del servidor, activar el entorno de Python e iniciar la API:
 
 ```powershell
@@ -269,3 +272,11 @@ Flutter & Dart · Full-Stack · Backend · AI/Data
 
 - GitHub: https://github.com/MiguelArbelaez0
 - LinkedIn: https://www.linkedin.com/in/miguel-arbelaez-v-57719542b/
+
+---
+
+## 🔎 Alcance y verificación documental (2026-11-02)
+
+El código confirma Flask, Flask-CORS, Prisma Client Python y una aplicación React/Vite con MySQL definido en `schema.prisma`. Sin embargo, `Proyecto_Completo/BACKEND/requirements.txt` solo declara Gunicorn; no instala todas las dependencias importadas. El procedimiento original presupone un contenedor Docker llamado `empresa` y un entorno `.venv` preexistente. No se ha verificado un arranque limpio ni la ejecución de la aplicación.
+
+**Estado de la revisión:** contraste estático entre documentación, estructura y archivos de configuración/código seleccionados. No se ejecutaron compilaciones, pruebas automatizadas, despliegues ni auditorías dinámicas de seguridad. La documentación describe el alcance observado, sin certificar preparación para producción.
