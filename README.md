@@ -1,5 +1,9 @@
 # Quantum Core
 
+> **Estado:** Completado · proyecto académico  
+> **Versión:** `1.0.0 (VERSION)`  
+> **Tecnologías:** React · Vite · Flask · Prisma · MySQL · Docker
+
 > **En resumen**  
 > **Stack:** React · Vite · Flask · Prisma · MySQL  
 > **Funcionalidad:** separación frontend/backend, API REST y operaciones CRUD; la instalación desde cero requiere completar dependencias.  
